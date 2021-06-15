@@ -3,7 +3,6 @@ from __future__ import unicode_literals
 
 from django import forms
 from django.utils.encoding import python_2_unicode_compatible
-from django.utils import six
 
 from .widgets import ClearableFileInput
 
@@ -33,7 +32,7 @@ class FakeEmptyFieldFile(object):
 
     """
     def __str__(self):
-        return six.text_type('')
+        return str('')
     _committed = True
 
 
